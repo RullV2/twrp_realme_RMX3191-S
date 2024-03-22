@@ -1,4 +1,9 @@
-# Crypto
+ro.product.name=RMX3191
+ro.product.product.device=RMX3191
+ro.product.board=oppo6768
+ro.board.platform=mt6768
+
+
 ro.adb.secure=0
 ro.boot.avb_version=1.1
 ro.boot.vbmeta.avb_version=1.1
