@@ -17,8 +17,11 @@
 
 DEVICE_PATH := device/realme/RMX3191
 
-# For building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES := true
+# Build
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -180,6 +183,8 @@ TW_INCLUDE_NTFS_3G := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone3/temp
+TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_NO_SCREEN_BLANK := true
@@ -191,10 +196,14 @@ TW_OZIP_DECRYPT_KEY := 0000
 # TW_Y_OFFSET := 50
 # TW_H_OFFSET := -50
 TW_NO_HAPTICS := true
+TW_DEVICE_VERSION := by ismasrull
 TW_FRAMERATE := 60
-TW_OVERRIDE_SYSTEM_PROPS := \
+TW_OVERRIDE_SYSTEM_PROPS := 
     "ro.build.product"
 TW_INCLUDE_LIBRESETPROP := true
+
+# Clock Position
+TW_CUSTOM_CLOCK_POS := "340"
 
 # resetprop and magiskboot
 TW_INCLUDE_RESETPROP := true
